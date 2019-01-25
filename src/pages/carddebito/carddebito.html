@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Cartões de Débito
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+  
+    <div *ngFor="let item of card" (click)="edit(item)" class="card text-white {{item.dc_skin}} mb-3">
+      <div class="card-header text-center">{{item.no_banco}}</div>
+      <div class="card-body">
+        <h3 class="card-title text-center">{{item.no_bandeira}}</h3>
+        <h5 class="card-text text-center"><small>Validade: </small>{{item.dt_validade}}</h5>
+      </div>
+    </div>
+  
+    <ion-fab bottom right>
+      <button ion-fab (click)="create()" class="btn-info">
+        <ion-icon name="md-add"></ion-icon>
+      </button>
+    </ion-fab>
+  </ion-content>

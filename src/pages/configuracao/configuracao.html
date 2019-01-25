@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Configuracao
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <ion-list no-border>
+    <ion-list-header>
+      Cadastros
+    </ion-list-header>
+    <ion-item (click)="contas()">
+      <ion-icon name='md-calculator' item-start></ion-icon>
+      Contas a pagar
+    </ion-item>
+    <ion-item (click)="cardcredito()">
+      <ion-icon name='ios-card' item-start></ion-icon>
+      Cartões de Crédito
+    </ion-item>
+    <ion-item (click)="carddebito()">
+      <ion-icon name='md-card' item-start></ion-icon>
+      Cartões de Débito
+    </ion-item>
+    <ion-item (click)="categoria()">
+      <ion-icon name='logo-buffer' item-start></ion-icon>
+      Categorias
+    </ion-item>
+    <ion-item (click)="formapagamento()">
+      <ion-icon name='md-cash' item-start></ion-icon>
+      Formas de Pagamento
+    </ion-item>
+  </ion-list>
+  <ion-list no-lines>
+    <ion-list-header>
+      Conta
+    </ion-list-header>
+    <ion-item>
+      Fulando de Tal
+      <ion-note item-end>
+        Nome
+      </ion-note>
+    </ion-item>
+    <ion-item>
+      Email@email.com
+      <ion-note item-end>
+        Email
+      </ion-note>
+    </ion-item>
+    <ion-item (click)="logout()">
+      Sair
+    </ion-item>
+  </ion-list>
+
+
+</ion-content>

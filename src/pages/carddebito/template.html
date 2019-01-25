@@ -1,0 +1,59 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Cartões de Débito
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <div class="card border-danger mb-3">
+    <div class="card-header text-center">Visa - Caixa</div>
+    <div class="card-body">
+      <h3 class="card-title text-center"><small>R$ </small> 2.000,00</h3>
+      <canvas #doughnutCanvas></canvas>
+      <h5 class="card-text text-center"><small>dia: </small> 10
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Validade: </small>02/2022</h5>
+    </div>
+  </div>
+
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
+      Cras justo odio
+      <span class="badge badge-primary badge-pill">></span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
+      Dapibus ac facilisis in
+      <span class="badge badge-primary badge-pill">></span>
+    </li>
+    <li class="list-group-item d-flex justify-content-between align-items-center bg-light">
+      Morbi leo risus
+      <span class="badge badge-primary badge-pill">></span>
+    </li>
+  </ul>
+
+  <div class="card text-white bg-warning mb-3">
+    <div class="card-header text-center">Elo - Caixa</div>
+    <div class="card-body">
+      <h3 class="card-title text-center"><small>R$ </small> 2.000,00</h3>
+      <h5 class="card-text text-center"><small>dia: </small> 25
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Validade: </small>05/2025</h5>
+    </div>
+  </div>
+
+  <div class="card text-white bg-success mb-3">
+    <div class="card-header text-center">MasterCard - Bradesco</div>
+    <div class="card-body">
+      <h3 class="card-title text-center"><small>R$ </small> 2.000,00</h3>
+      <h5 class="card-text text-center"><small>dia: </small> 02
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<small>Validade: </small>10/2020</h5>
+    </div>
+  </div>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="create()" class="btn-info">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Categorias
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list no-lines>
+    <button ion-item *ngFor="let item of categoria" (click)="edit(item)">
+      {{item.no_categoria}}
+    </button>
+  </ion-list>
+
+  <span>* você pode cadastrar até 10 categorias</span>
+
+  <ion-fab bottom right>
+    <button ion-fab (click)="create()" class="btn-info">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+  </ion-fab>
+</ion-content>

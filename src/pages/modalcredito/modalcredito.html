@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Cadastro</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="dismiss()">Cancelar</button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form>
+    <div class="form-group">
+      <label for="bandeira">Bandeira</label>
+      <input type="text" class="form-control" name="no_bandeira" [(ngModel)]="card.no_bandeira" placeholder="Visa, Master, Amex, etc.">
+    </div>
+    <div class="form-group">
+      <label for="bandeira">Banco ou Financeira</label>
+      <input type="text" class="form-control" name="no_banco" [(ngModel)]="card.no_banco" placeholder="BB, Caixa, Bradesco, etc.">
+    </div>
+    <div class="form-group">
+      <label for="bandeira">Limite de Crédito</label>
+      <input type="text" class="form-control" name="nm_limite" currencyMask [(ngModel)]="card.nm_limite" [options]="{ prefix: 'R$ ', thousands: '.', decimal: ',' }"
+        placeholder="0,00">
+    </div>
+    <div class="form-group">
+      <label for="bandeira">Data de Vencimento da Fatura</label>
+      <input type="number" class="form-control" name="dt_vencimento" [(ngModel)]="card.dt_vencimento" placeholder="00" min="1" max="31">
+    </div>
+    <div class="form-group">
+      <label for="bandeira">Data de Fechamento da Fatura</label>
+      <input type="number" class="form-control" name="dt_fechamento_fatura" [(ngModel)]="card.dt_fechamento_fatura" placeholder="00" min="1" max="31">
+    </div>
+    <div class="form-group">
+      <label for="bandeira">Data de Validade do cartão</label>
+      <input type="text" class="form-control" name="dt_validade" [(ngModel)]="card.dt_validade" placeholder="00/0000">
+      <small class="form-text text-muted">pode preencher com qualquer dia do mês de vencimento.</small>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Skin (cor)</label>
+      <select class="form-control" name="dc_skin" [(ngModel)]="card.dc_skin">
+        <option value="bg-primary">primary</option>
+        <option value="bg-secondary">secundary</option>
+        <option value="bg-success">verde</option>
+        <option value="bg-danger">vermelho</option>
+        <option value="bg-warning">amarelo</option>
+        <option value="bg-info">azul</option>
+        <option value="bg-dark">preto</option>
+      </select>
+    </div>
+  </form>
+  <ion-row>
+    <ion-col>
+      <button ion-button full class="submit-btn" (click)="salvar()" type="submit">Salvar
+      </button>
+    </ion-col>
+  </ion-row>
+</ion-content>

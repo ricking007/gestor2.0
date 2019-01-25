@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Formas de Pagamento
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <ion-list no-lines>
+    <button ion-item *ngFor="let item of formapagamento">
+      {{item.no_formapagamento}}
+    </button>
+  </ion-list>
+<!--
+  (click)="edit(item)"
+  <ion-fab bottom right>
+    <button ion-fab (click)="create()" class="btn-info">
+      <ion-icon name="md-add"></ion-icon>
+    </button>
+  </ion-fab>
+-->
+  
+</ion-content>
